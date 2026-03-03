@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Doreen Sasaka — Product Leader</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -15,21 +15,16 @@
   --ease-out:cubic-bezier(0.0,0.0,0.2,1);
 }
 html{scroll-behavior:smooth;}
-body{background:var(--paper);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 
-/* CURSOR */
-*,button,a{cursor:none!important;}
-#cur{width:6px;height:6px;background:var(--orange);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .15s var(--ease),width .2s var(--ease),height .2s var(--ease);}
-#cur-ring{width:36px;height:36px;border:1px solid rgba(232,82,10,0.28);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .08s linear;}
-body:has(a:hover) #cur{transform:translate(-50%,-50%) scale(3);background:rgba(232,82,10,0.15);border:1px solid var(--orange);}
-body:has(a:hover) #cur-ring{opacity:0;}
+
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:22px 60px;transition:padding .5s var(--ease),background .4s,border-color .4s;border-bottom:1px solid transparent;}
 nav.scrolled{background:rgba(250,247,242,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:var(--border);padding:16px 60px;}
-.nav-brand{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);}
+.nav-brand{font-family:'Inter',sans-serif;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;position:relative;padding-bottom:3px;}
+.nav-links a{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;position:relative;padding-bottom:3px;}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--orange);transition:width .35s var(--ease);}
 .nav-links a:hover{color:var(--orange);}
 .nav-links a:hover::after{width:100%;}
@@ -37,12 +32,12 @@ nav.scrolled{background:rgba(250,247,242,0.92);backdrop-filter:blur(20px);-webki
 /* HERO */
 .hero{min-height:100vh;padding:140px 60px 80px;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:end;position:relative;overflow:hidden;}
 .hero::before{content:'DS';position:absolute;right:-20px;top:60px;font-family:'Fraunces',serif;font-size:340px;font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(232,82,10,0.055);line-height:1;pointer-events:none;user-select:none;transition:opacity 1s;}
-.eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:14px;margin-bottom:24px;opacity:0;animation:rise .7s .05s var(--ease) forwards;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:14px;margin-bottom:24px;opacity:0;animation:rise .7s .05s var(--ease) forwards;}
 .eyebrow::before{content:'';display:block;width:36px;height:1px;background:var(--orange);}
 h1{font-family:'Fraunces',serif;font-size:clamp(64px,8vw,110px);font-weight:900;line-height:.92;letter-spacing:-.03em;margin-bottom:16px;opacity:0;animation:rise .9s .15s var(--ease) forwards;}
 h1 em{font-style:italic;color:var(--orange);font-weight:300;}
 .hero-sub{font-family:'Fraunces',serif;font-size:clamp(18px,2.2vw,26px);font-weight:300;font-style:italic;color:var(--muted);margin-bottom:40px;opacity:0;animation:rise .9s .28s var(--ease) forwards;}
-.hero-desc{font-size:16px;line-height:1.85;color:#4a4540;max-width:580px;margin-bottom:48px;opacity:0;animation:rise .9s .4s var(--ease) forwards;}
+.hero-desc{font-size:17px;line-height:1.8;color:#3d3830;max-width:580px;margin-bottom:48px;font-weight:500;opacity:0;animation:rise .9s .4s var(--ease) forwards;}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:rise .9s .52s var(--ease) forwards;}
 .btn-p{display:inline-flex;align-items:center;gap:8px;padding:15px 30px;background:var(--orange);color:#fff;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease);}
 .btn-p:hover{background:#c4430a;transform:translateY(-3px);box-shadow:0 12px 40px rgba(232,82,10,0.28);}
@@ -53,7 +48,7 @@ h1 em{font-style:italic;color:var(--orange);font-weight:300;}
 .stat-item:first-child{border-top:1px solid var(--border);}
 .stat-val{font-family:'Fraunces',serif;font-size:52px;font-weight:900;color:var(--orange);line-height:1;}
 .stat-ctx{text-align:right;}
-.stat-lbl{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:4px;}
+.stat-lbl{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px;}
 .stat-sub{font-size:11px;color:var(--muted);}
 
 /* MARQUEE */
@@ -65,7 +60,7 @@ h1 em{font-style:italic;color:var(--orange);font-weight:300;}
 
 /* SECTIONS */
 section{padding:110px 60px;}
-.kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.kicker{font-family:'Inter',sans-serif;font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:12px;margin-bottom:20px;}
 .kicker::before{content:'';width:24px;height:1px;background:var(--orange);display:block;}
 .sh{font-family:'Fraunces',serif;font-size:clamp(36px,4.5vw,58px);font-weight:900;line-height:1.0;letter-spacing:-.02em;margin-bottom:64px;}
 .sh em{font-style:italic;color:var(--orange);font-weight:300;}
@@ -85,7 +80,7 @@ section{padding:110px 60px;}
 .step-n{font-family:'Fraunces',serif;font-size:30px;font-weight:900;color:rgba(232,82,10,.2);line-height:1;flex-shrink:0;padding-top:2px;transition:color .4s var(--ease);}
 .step:hover .step-n{color:rgba(232,82,10,.5);}
 .step-title{font-size:13px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--dark-text);margin-bottom:8px;}
-.step-body{font-size:13px;line-height:1.75;color:rgba(240,236,228,.5);}
+.step-body{font-size:14px;line-height:1.8;color:rgba(240,236,228,.55);}
 .step-body strong{color:rgba(232,82,10,.8);font-weight:700;}
 .v-payoff{margin-top:32px;padding:28px 32px;background:rgba(232,82,10,.08);border:1px solid rgba(232,82,10,.2);transition:background .4s var(--ease),border-color .4s var(--ease);}
 .v-payoff:hover{background:rgba(232,82,10,.13);border-color:rgba(232,82,10,.4);}
@@ -248,9 +243,6 @@ section{padding:110px 60px;}
 </head>
 <body>
 
-<div id="cur"></div>
-<div id="cur-ring"></div>
-
 <nav id="nav">
   <span class="nav-brand">Doreen Sasaka</span>
   <ul class="nav-links">
@@ -275,6 +267,8 @@ section{padding:110px 60px;}
       <a href="https://www.linkedin.com/in/doreen-sasaka-1ab3a796/" target="_blank" class="btn-g">LinkedIn ↗</a>
       <a href="https://drive.google.com/file/d/1AGIPQ9iBj0y1OGN81f-u-AmjqCmrUlqd/view?usp=drive_link" target="_blank" class="btn-g">Download CV ↓</a>
     </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--muted);">&#128231; <a id="hero-email" href="#" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(232,82,10,0.3);padding-bottom:1px;">sasaka4&#64;gmail&#46;com</a></p>
+    <script>var he=document.getElementById('hero-email');var em='sasaka4'+String.fromCharCode(64)+'gmail.com';he.href='mailto:'+em;he.textContent=em;</script>
   </div>
   <div class="stats">
     <div class="stat-item">
@@ -653,23 +647,17 @@ section{padding:110px 60px;}
     <a href="https://www.linkedin.com/in/doreen-sasaka-1ab3a796/" target="_blank" class="cb-p">View LinkedIn ↗</a>
     <a href="https://drive.google.com/file/d/1AGIPQ9iBj0y1OGN81f-u-AmjqCmrUlqd/view?usp=drive_link" target="_blank" class="cb-o">Download CV ↓</a>
   </div>
-  <div class="c-email">Or reach me directly at <a href="/cdn-cgi/l/email-protection#47342634262c267307202a262e2b6924282a"><span class="__cf_email__" data-cfemail="80f3e1f3e1ebe1b4c0e7ede1e9ecaee3efed">[email&#160;protected]</span></a></div>
+  <div class="c-email">Or reach me directly at <a id="email-link" href="#">sasaka4&#64;gmail&#46;com</a></div>
+  <script>
+    var el = document.getElementById('email-link');
+    var e = 'sasaka4' + String.fromCharCode(64) + 'gmail.com';
+    el.href = 'mailto:' + e;
+    el.textContent = e;
+  </script>
 </section>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ── Smooth cursor with lerp ──
-const cur = document.getElementById('cur');
-const ring = document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX; my=e.clientY;
-  cur.style.left=mx+'px'; cur.style.top=my+'px';
-});
-(function lerpRing(){
-  rx+=(mx-rx)*.1; ry+=(my-ry)*.1;
-  ring.style.left=rx+'px'; ring.style.top=ry+'px';
-  requestAnimationFrame(lerpRing);
-})();
+<script>
+// cursor removed
 
 // ── Smooth nav on scroll ──
 const nav = document.getElementById('nav');
