@@ -167,8 +167,8 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:var(
 #field .section-num{border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.06);}
 #field .section-label{border-color:rgba(255,255,255,.12);}
 #field .section-title{color:var(--white);}
-.field-body{display:grid;grid-template-columns:1fr 1fr;border-top:4px solid rgba(255,255,255,.12);}
-.field-left{padding:64px;border-right:4px solid rgba(255,255,255,.12);}
+.field-body{display:grid;grid-template-columns:1fr 1fr;border-top:4px solid rgba(255,255,255,.12);align-items:stretch;}
+.field-left{padding:64px;border-right:4px solid rgba(255,255,255,.12);display:flex;flex-direction:column;}
 .field-intro{font-size:17px;line-height:1.85;color:rgba(255,255,255,.6);margin-bottom:40px;}
 .field-pull{font-size:24px;font-weight:700;line-height:1.4;color:var(--white);padding-left:24px;border-left:3px solid var(--orange);margin-bottom:48px;}
 .f-story{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.1);}
@@ -176,15 +176,15 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:var(
 .f-loc{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
 .f-title{font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px;}
 .f-body{font-size:13px;line-height:1.7;color:rgba(255,255,255,.45);}
-.field-right{display:grid;grid-template-rows:1fr 1fr;gap:0;}
-.photo-frame{position:relative;overflow:hidden;border-bottom:4px solid rgba(255,255,255,.12);}
+.field-right{display:grid;grid-template-rows:repeat(3,1fr);gap:0;min-height:700px;}
+.photo-frame{position:relative;overflow:hidden;border-bottom:4px solid rgba(255,255,255,.12);height:100%;min-height:220px;}
 .photo-frame:last-child{border-bottom:none;}
-.photo-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(20%) contrast(1.05);transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s;}
+.photo-frame img{width:100%;height:100%;min-height:220px;object-fit:cover;object-position:center;display:block;filter:grayscale(20%) contrast(1.05);transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s;}
 .photo-frame:hover img{transform:scale(1.04);filter:grayscale(0%) contrast(1.1);}
 .photo-cap{position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.8);}
 
 /* PHOTO GRID - full width under field */
-.photo-grid{display:grid;grid-template-columns:2fr 1fr 1fr;border-top:4px solid rgba(255,255,255,.12);}
+.photo-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;border-top:4px solid rgba(255,255,255,.12);}
 .pgrid-frame{position:relative;overflow:hidden;height:320px;border-right:4px solid rgba(255,255,255,.12);}
 .pgrid-frame:last-child{border-right:none;}
 .pgrid-frame img{width:100%;height:100%;object-fit:cover;filter:grayscale(30%) contrast(1.05);transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s;}
@@ -208,8 +208,8 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:var(
 .istat-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);}
 
 /* ── AWARDS ── */
-.awards-grid{display:grid;grid-template-columns:1fr 1fr 1fr;}
-.award-card{padding:48px 44px;border-right:var(--border-thick);border-bottom:var(--border-thick);transition:background .2s;}
+.awards-grid{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start;}
+.award-card{padding:48px 44px;border-right:var(--border-thick);border-bottom:var(--border-thick);transition:background .2s;display:flex;flex-direction:column;}
 .award-card:nth-child(3n){border-right:none;}
 .award-card.featured{background:var(--black);color:var(--white);}
 .award-card.featured .a-org{color:var(--orange);}
@@ -545,7 +545,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:var(
       <div class="p-role">Lead PM — ERP & Supply Chain</div>
       <p class="p-desc">Managing inventory and operations across hundreds of shops requires knowing when the system is breaking before agents do. I managed the Odoo ERP, payment integrations, and built dashboards surfacing systemic failures in real time.</p>
       <ul class="p-out">
-        <li>Managed <strong>hundreds of retail locations</strong> across 10 countries in Sub Saharan Africa</li>
+        <li>Managed <strong>hundreds of retail locations</strong> across Kenya</li>
         <li>Analysed <strong>10,000+ Jira tickets</strong> to surface patterns</li>
         <li>Built roadmaps with T-shirt sizing <strong>2026–2028</strong></li>
         <li><strong>94%</strong> inventory migration match rate</li>
